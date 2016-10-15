@@ -2,8 +2,8 @@
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
  *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ * Any CSS and SCSS file within this directory, lib/stylesheets, vendor/stylesheets,
+ * or any plugin's vendor/stylesheets directory can be referenced here using a relative path.
  *
  * You're free to add application-wide styles to this file and they'll appear at the bottom of the
  * compiled file so the styles you add here take precedence over styles defined in any styles
@@ -13,3 +13,488 @@
  *= require_tree .
  *= require_self
  */
+
+ @media screen and (max-width: 1000px) {
+     .body {
+         margin-left: 7% !important;
+         margin-right: 7% !important;
+         margin-top: 250px !important;
+     }
+
+     .header {
+         height: 190px !important;
+     }
+
+     .nameicon {
+         width: 100px !important;
+         height: 100px !important;
+     }
+
+     .nametop {
+         margin-top: 5px !important;
+         height: 30px !important;
+         font-size: 2.3em !important;
+     }
+
+     .namebottom {
+         margin-top: 15px !important;
+         height: 70px !important;
+         font-size: 2.3em !important;
+     }
+
+     .linkbarcontainer{
+         float:left !important;
+         width: 100% !important;
+     }
+
+     .linkbar {
+         float: left !important;
+         font-size: 2em !important;
+         width: 100% !important;
+         margin-top: 15px !important;
+     }
+
+     .link {
+         margin-right: 45px !important;
+     }
+
+     .title {
+         font-size: 3em !important;
+     }
+
+     .textbox {
+         width: 40% !important;
+         height: 50px !important;
+         font-size: 2em !important;
+     }
+
+     .notetable {
+         font-size: 1.35em !important;
+     }
+
+     .searchButton {
+         width: 100px;
+         height: 60px;
+         font-size: 1.5em;
+     }
+
+     .searchBox {
+         width: 500px;
+         height: 60px;
+         font-size: 1.5em;
+     }
+
+     .gifbox {
+         width: 600px !important;
+         height: 600px !important;
+     }
+
+     .canvas {
+         width: 600px !important;
+         height: 600px !important;
+     }
+
+     .controls {
+         float: none !important;
+     }
+
+     .canvascontainer {
+         float: none !important;
+     }
+
+     .floatcontainer {
+         float: none !important;
+     }
+
+     .controlhead {
+         font-size: 2.5em !important;
+     }
+
+     .controlgroup {
+         font-size: 2em !important;
+     }
+
+     .txt {
+         font-size: 1em !important;
+         width: 80% !important;
+     }
+
+     .num {
+         font-size: 1em !important;
+         width: 20% !important;
+     }
+
+     .controlcontainer {
+         width: 100%;
+         display: inline;
+     }
+
+     .gifbutton {
+         height: 50px !important;
+         font-size: 1.5em !important;
+     }
+
+     #shift {
+         margin-left: -10px !important;
+         margin-bottom: -15px !important;
+     }
+ }
+
+ @font-face {
+     font-family: 'montserrat';
+     src: url('Montserrat-Hairline.otf') format('opentype');
+     font-weight: 100;
+ }
+
+ @font-face {
+     font-family: 'montserrat';
+     src: url('Montserrat-UltraLight.otf') format('opentype');
+     font-weight: 200;
+ }
+
+ @font-face {
+     font-family: 'montserrat';
+     src: url('Montserrat-Light.otf') format('opentype');
+     font-weight: 300;
+ }
+
+ @font-face {
+     font-family: 'montserrat';
+     src: url('Montserrat-Regular.otf') format('opentype');
+     font-weight: 400;
+ }
+
+ @font-face {
+     font-family: 'montserrat';
+     src: url('Montserrat-SemiBold.otf');
+     font-weight: 500;
+ }
+
+ @font-face {
+     font-family: 'montserrat';
+     src: url('Montserrat-Bold.otf');
+     font-weight: 600;
+ }
+
+ @font-face {
+     font-family: 'montserrat';
+     src: url('Montserrat-ExtraBold.otf');
+     font-weight: 700;
+ }
+
+ @font-face {
+     font-family: 'montserrat';
+     src: url('Montserrat-Black.otf');
+     font-weight: 800;
+ }
+
+ a { text-decoration: none; color:gray; }
+ a:visited { text-decoration: "#545454"; }
+ a:hover { text-decoration: none; }
+ a:focus { text-decoration: none; }
+ a:hover, a:active { text-decoration: none; }
+
+ a#fade {
+     color: black;
+   border-bottom: 3px solid rgba(192, 192, 192, 0);
+
+   -webkit-transition: border 500ms ease;
+   -moz-transition: border 500ms ease;
+   -ms-transition: border 500ms ease;
+   -o-transition: border 500ms ease;
+   transition: border 500ms ease;
+ }
+
+ a#fade:hover {
+   border-bottom: 3px solid rgba(0, 0, 0, 1);
+ }
+
+ a#fade-header {
+   border-bottom: 3px solid rgba(192, 192, 192, 0);
+     color: black;
+
+   -webkit-transition: border 500ms ease;
+   -moz-transition: border 500ms ease;
+   -ms-transition: border 500ms ease;
+   -o-transition: border 500ms ease;
+   transition: border 500ms ease;
+ }
+
+ a#fade-header:hover {
+   border-bottom: 3px solid rgba(0, 0, 0, 1);
+ }
+
+ body{
+     margin: 0;
+ }
+
+ .global {
+     margin-left: 1%;
+     margin-right: 1%;
+     margin-top: 15px;
+     margin-bottom: 15px;
+ }
+
+ .header{
+     margin-bottom: 30px;
+     padding-top: 20px;
+     height: 60px;
+     position: fixed;
+     width: 98%;
+     top: 0px;
+     background-color: white;
+     border-bottom-width: thin;
+     border-bottom-style: solid;
+     border-bottom-color: black;
+ }
+
+ .nameplate {
+     float: left;
+     cursor: pointer;
+ }
+
+ .nameicon {
+     width: 40px;
+     height: 40px;
+     background-image: url("logo.png");
+     background-repeat: no-repeat;
+     background-size: contain;
+     float: left;
+ }
+
+ .namecontainer {
+     margin-left: 10px;
+     float: left;
+ }
+
+ .nametop {
+     height: 20px;
+     font-family: montserrat;
+     font-weight: 600;
+ }
+
+ .namebottom {
+     height: 20px;
+     font-family: montserrat;
+     font-weight: 300;
+     color: darkgray
+ }
+
+ .linkbarcontainer{
+     float:right;
+     width: 60%;
+ }
+
+ .linkbar {
+     float: right;
+     width: auto;
+     font-family: montserrat;
+     font-weight: 400;
+     color: black;
+     line-height: 25px;
+ }
+
+ .link {
+     display: inline;
+     margin-left: 5px;
+     margin-right: 5px;
+     text-align: center;
+     word-wrap: break-word;
+ }
+
+ .body {
+     margin-left: 25%;
+     margin-right: 25%;
+     margin-top: 115px;
+ }
+
+ .title {
+     font-family: "montserrat";
+     font-weight: 700;
+     font-size: 26px;
+     margin-bottom: 20px;
+ }
+
+ .content {
+     font-family: montserrat;
+     font-weight: 300;
+     font-size: 1em;
+     line-height: 25px;
+     margin-bottom: 15px;
+ }
+
+ .project{
+     margin-bottom: 30px;
+     font-family: montserrat;
+ }
+
+ .projectheader {
+     font-weight: 400;
+     font-size: 18px;
+     margin-bottom: 15px;
+ }
+
+ .projectlink {
+     font-weight: 400;
+     font-size: 16px;
+     margin-bottom: 5px;
+     magrin-left: 10px;
+ }
+
+ .projectcontent {
+     margin-top: 20px;
+     margin-left: 20px;
+     line-height: 30px;
+     font-weight: 300;
+     font-size: 16px;
+ }
+
+ .textbox {
+     font-family: montserrat;
+     background-color: #F1F1F1;
+ }
+
+ .selectcourse {
+     font-family: montserrat;
+     text-align: center;
+     margin-bottom: 10px;
+ }
+
+ .selectmonth {
+     font-family: montserrat;
+     text-align: center;
+     margin-bottom: 10px;
+ }
+
+ .notetable {
+     font-family: montserrat;
+     font-weight: 300;
+     font-size: 13px;
+ }
+
+ td{
+     padding:0 15px 5px 15px;
+ }
+
+ .blogheader {
+     font-family: montserrat;
+     font-weight: 500;
+     font-size: 20px;
+     margin-bottom: 5px;
+ }
+
+ .blogdate {
+     font-family: montserrat;
+     font-weight: 400;
+     color: gray;
+     margin-bottom: 20px;
+ }
+
+ .latesthint {
+     font-family: montserrat;
+     font-weight: 300;
+ }
+
+ .pageLink{
+     margin-left: 10px;
+     margin-right: 10px;
+ }
+
+ .blogcontent {
+     font-family: montserrat;
+     font-weight: 300;
+     font-size: 1em;
+     line-height: 25px;
+     margin-bottom: 15px;
+     margin-left: 15px;
+ }
+
+ .navibuttons{
+     font-family: Montserrat;
+     font-weight: 400;
+     margin-left: 6%;
+     margin-right: 6%;
+     margin-bottom: 20px;
+     line-height: 150%
+ }
+
+ .tutorialimage{
+     margin-top: 20px;
+     margin-bottom: 20px;
+     margin: auto;
+     border-radius: 15px;
+     border-style: solid;
+     border-width: 7px;
+     border-color: black;
+ }
+
+ .txt {
+     font-family: MOntserrat !important;
+     font-weight: 400 !important;
+     width: 125px;
+ }
+
+ .num {
+     font-family: Montserrat !important;
+     font-weight: 400 !important;
+     width: 50px;
+
+ }
+
+ .controls {
+     font-family: Montserrat;
+     font-weight: 400;
+     width: 100%;
+     float: left;
+     margin-bottom: 20px;
+     margin-left: 10px;
+ }
+
+ .controlgroup {
+     line-height: 150%;
+     margin-left: 10px;
+     margin-bottom: 10px;
+ }
+
+ .buttongroup {
+     width: 100%;
+ }
+
+ .floatcontainer {
+     float: left;
+ }
+
+ .gifbutton {
+     width: 100%;
+     height: 30px;
+     font-family: Montserrat !important;
+     font-weight: 500 !important;
+     margin-top: 20px;
+
+ }
+
+ .canvas {
+     border: 2px;
+     border-style: solid;
+ }
+
+ .canvascontainer {
+     float: left;
+     margin-bottom: 10px;
+ }
+
+ .controlcontainer {
+     display: inline-block;
+ }
+
+ .controlhead {
+     font-family: Montserrat;
+     font-weight: 500;
+     margin-top: 15px;
+ }
+
+ .gifbox {
+     border: 2px;
+     border-style: solid;
+     border-color: forestgreen;
+ }
