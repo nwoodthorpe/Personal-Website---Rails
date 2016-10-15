@@ -1,3 +1,4 @@
+# Static pages
 class PageController < ApplicationController
   def index
   end

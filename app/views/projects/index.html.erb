@@ -1,0 +1,155 @@
+<html>
+    <div class="global">
+        <%= render 'page/header' %>
+        <div class="body">
+            <div class="title">
+                Projects
+            </div>
+            <div class="project">
+                <div class="projectheader">
+                    Virtual Drive Made of a Million MySQL Databases
+                </div>
+                <div class="projectcontent">
+                    In-between my first work term and the next school term, I made a virtual drive out of a million MySQL databases. I did this to learn about some complex Linux topics (Kernel space programming, interfacing with drivers, etc.). The result was a semi-working virtual drive. Write commands were sent to a device file which proxied to the kernel driver. The driver then divided the data and generated a million MySQL queries. The queries were then polled via netlinks by a daemon running in user-space, which executed the queries. Unfortunately, MySQL doesn't play well with a million databases, so performance wasn't great.
+                </div>
+            </div>
+            <hr />
+            <div class="project">
+                <div class="projectheader">
+                    BusStop
+                </div>
+                <div class="projectlink">
+                    <a href="https://github.com/nwoodthorpe/BusStop" target="_blank"> > Source on Github</a>
+                </div>
+                <div class="projectlink">
+                    <a href="https://play.google.com/store/apps/details?id=com.nwoodthorpe.busstop" target="_blank"> > Play Store Link</a>
+                </div>
+                <div class="projectcontent">
+                    BusStop is an Android app that puts live ETAs of your favorite bus routes in your notification bar. Set your favorites once, and live times are ready whenever you need them. The app is built on top of my GRT Unofficial Live API.
+                </div>
+            </div>
+            <hr />
+            <div class="project">
+                <div class="projectheader">
+                    WatWhenWhere
+                </div>
+                <div class="projectlink">
+                    <a href="https://github.com/nwoodthorpe/WatWhenWhere" target="_blank"> > Source on Github</a>
+                </div>
+                <div class="projectlink">
+                    <a href="http://watwhenwhere.ca" target="_blank"> > Project Website</a>
+                </div>
+                <div class="projectcontent">
+                    WatWhenWhere is a web app built by a team of me and 3 others on the LAMP stack that allows University of Waterloo students to find common availabilities in their packed schedules. The app utilizes a Facebook/Google login to give users easy and quick access to our service, removing the hassle of signing up. Before launch, the app was tested by a beta team of 20 people. The app was launched to the public on January 4'th, 2016 and is in continued development.
+                </div>
+            </div>
+            <hr />
+            <div class="project">
+                <div class="projectheader">
+                    WATiSpend
+                </div>
+                <div class="projectlink">
+                    <a href="https://github.com/nwoodthorpe/WatISpend" target="_blank"> > Source on Github</a>
+                </div>
+                <div class="projectlink">
+                    <a href="http://watispend.com" target="_blank"> > Project Website</a>
+                </div>
+                <div class="projectcontent">
+                    WATiSpend is a mobile app live on both the App Store and Play Store that allows UWaterloo students to manage their meal-plan spending habits by showing spending trends and giving suggested daily limits. Stefan Pleava originally created the iOS version. After lots of requests to make the app available for Android, I teamed with Stefan and created a port for Android. The app is created in Java and XML, and the backend is done in Python and Firebase.
+                </div>
+            </div>
+            <hr />
+            <div class="project">
+                <div class="projectheader">
+                    GRT Unofficial Live API
+                </div>
+                <div class="projectlink">
+                    <a href="https://github.com/nwoodthorpe/GRTUnofficialLiveAPI" target="_blank"> > Documentation on Github</a>
+                </div>
+                <div class="projectcontent">
+                    The GRT Unofficial Live API is a REST API that lets developers integrate live Grand River Transit bus times (when the next bus will arrive at any given stop) into their applications. Previously, only static times were provided to developers. To get live times, I reverse engineered the GRT webapp and found the endpoints it used to fetch live times. To prevent abuse, I'm keeping this closed-source for now.
+                </div>
+            </div>
+            <hr />
+            <div class="project">
+                <div class="projectheader">
+                    Math Gifs
+                </div>
+                <div class="projectlink">
+                    <a href="https://github.com/nwoodthorpe/MathGif" target="_blank"> > Source on Github</a>
+                </div>
+                <div class="projectlink">
+                    <a href="mathgif/"> > Project Website</a>
+                </div>
+                <div class="projectcontent">
+                    Math Gifs is a small tool that allows you to plot a function transforming as a constant tends from one value to another. By being creative, very strange and erratic functions can be made. It also allows you to publish your animation to a gif and retrieve a permanent link. Efficiency was the hardest part of this project, plotting or creating gifs too slowly will decrease user experience. The web tool is created in JavaScript and PHP.
+                </div>
+            </div>
+            <hr />
+            <div class="project">
+                <div class="projectheader">
+                    QuickPlot.js
+                </div>
+                <div class="projectlink">
+                    <a href="https://github.com/nwoodthorpe/QuickPlotJS" target="_blank"> > Source on Github</a>
+                </div>
+                <div class="projectcontent">
+                    QuickPlot.js is my API I used to create Math Gifs. All other third party graphing APIs I tried were too slow, so I created my own that runs 30x faster. QuickPlot.js will graph any math function on any size canvas with multiple configurable options. By utilizing a cache and never repeating calculations we've done before, this API graphs in less than 5 ms without jeopardizing constant space complexity.
+                </div>
+            </div>
+            <hr />
+            <div class="project">
+                <div class="projectheader">
+                    Android Note Manager
+                </div>
+                <div class="projectlink">
+                    <a href="https://github.com/nwoodthorpe/NoteApp-Android" target="_blank"> > Source on Github</a>
+                </div>
+
+                <div class="projectcontent">
+                    Over the summer of 2015, I started and finished development for my Android Note Manager. The Note Manager allows users to upload their school or personal notes to their cloud account and access them wherever they are, whenever they want. All notes are associated with a date, time, title, description and tags. This allows users to sort by date or relevance to a search term. The app is written in Java and XML, with web backend done in PHP and MySQL. User passwords are securely encrypted with a SHA-512 salted hash setup.
+                </div>
+            </div>
+            <hr />
+            <div class="project">
+                <div class="projectheader">
+                    QuestionBot
+                </div>
+                <div class="projectlink">
+                    <a href="https://github.com/nwoodthorpe/QuestionBot" target="_blank"> > Source on Github</a>
+                </div>
+                <div class="projectlink">
+                    <a href="http://nwoodthorpe.com/QuestionBot/" target="_blank"> > Project Website</a>
+                </div>
+                <div class="projectcontent">
+                    QuestionBot is a prank project I released in January 2016. I advertised it as a 6-month long project that utilised Machine Learning and Artifical Neural Networks to accurately answer any question the user gave it. Instead, 'QuestionBot' rejects all questions and begins to grow mad as the user asks more and more questions. Since launch, the page has seen siginificant traffic.
+                </div>
+            </div>
+            <hr />
+            <div class="project">
+                <div class="projectheader">
+                    LaTeX Notes
+                </div>
+                <div class="projectlink">
+                    <a href="https://github.com/nwoodthorpe/LatexNotes" target="_blank"> > Source on Github</a>
+                </div>
+                <div class="projectlink">
+                    <a href="http://nwoodthorpe.com/TexNotes/" target="_blank"> > Project Website</a>
+                </div>
+                <div class="projectcontent">
+                    After beginning my first term at the University of Waterloo on a very rough note, I decided to begin typesetting my notes with LaTeX, something I had been meaning to learn how to do for a long time. As an incentive to typeset and maintain quality, I've put my notes up on my website for free and accumulated a somewhat-large audience. Over the first term, 1.3GB of notes were downloaded from my site. As of February 9'th, I am no longer uploading notes to make time for other projects.
+                </div>
+            </div>
+            <hr />
+            <div class="project">
+                <div class="projectheader">
+                    Java Grader for Teacher
+                </div>
+                <div class="projectcontent">
+                    In high-school, I created an automatic program-marker for my computer science teacher. The program worked by asking for all .java files from all students, Scanner input and expected output. It then compiled the .java files, inputted the Scanner input, checked the output against the expected output, and assigned each student a grade. The application was written in Java.
+                </div>
+            </div>
+            <hr />
+        </div>
+    </div>
+</html>
