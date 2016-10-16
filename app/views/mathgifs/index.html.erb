@@ -1,0 +1,77 @@
+<% content_for :head do %>
+    <script>
+        function drawAxis(){
+            ctx.fillStyle = "#000000";
+            ctx.fillRect(0, 150, 300, 1);
+            ctx.fillRect(150, 0, 1, 300);
+            ctx.fillText("x", 0, 145, 10);
+            ctx.fillText("y", 153, 290, 10);
+            ctx.fillStyle = "#696969";
+            ctx.fillText("nwoodthorpe.com/mathgifs/", 3, 294, 100000);
+        }
+    </script>
+    <script type="text/javascript" src="parser.js"></script>
+    <script type="text/javascript" src="LZWEncoder.js"></script>
+    <script type="text/javascript" src="NeuQuant.js"></script>
+    <script type="text/javascript" src="GIFEncoder.js"></script>
+    <script type="text/javascript" src="b64.js"></script>
+<% end %>
+
+<div class="global">
+    <%= render 'page/header' %>
+    <div class="body">
+        <div class="title">
+            Math Gifs
+        </div>
+        <div class="canvascontainer">
+            <img width=300px height=300px id="img" src="" style="display: none" class="gifbox"/>
+            <canvas id="canvas" width=300px height=300px class="canvas">YOU CANT LOAD THE CANVAS WTF</canvas>
+        </div>
+        <div class="controlcontainer">
+            <div class="controls">
+                <div class="controlhead">Function</div>
+                <div class="controlgroup">
+                    y = <input type=text value="cos(x) / sin(a)"  class="txt" id="function"/>
+                </div>
+                <div class="controlhead">Constant</div>
+                <div class="controlgroup">
+                    a: <input type=number value=1 class="num" id="abegin"/> to <input type=number value=6.5 class="num" id="aend"/>
+                </div>
+                <div class="controlgroup">
+                    Add <input type=number value=0.2 class="num" id="increment"/> per frame
+                </div>
+                <div class="controlhead">Gif Settings</div>
+                <div class="controlgroup">
+                    FPS: <input type=number value=20 class="num" id="fps"/>
+                </div>
+                <div class="buttongroup">
+                    <input type=button value="Preview Gif" class="gifbutton" onclick="beginDrawCanvas()" id="shift"/>
+                </div>
+            </div>
+        </div>
+        <div class="buttongroup">
+            <input type=button value="Generate Gif" class="gifbutton" onclick="beginDrawGif()"/>
+            <input type=button value="Get Permanent Link" class="gifbutton" onclick="uploadToServer()"/>
+        </div>
+        <br/>
+        <hr />
+        <br/>
+    <div class="title">Instructions</div>
+        <div class="content">
+        'Math Gifs' will create a gif of a function in 'x' and 'a' transforming as 'a' tends from one value to another.  The resulting gifs sometimes look pretty cool!
+        </div>
+        <div class="content">
+            When typing a function, make sure to use brackets to signify order of operations, the parser isn't great at that. Also, always use * for multiplication.
+        </div>
+        <div class="content">
+            Begin by filling in your settings and clicking 'Preview Gif'. This shows what the gif will look like, but doesn't actually generate a gif you can download. It's good for playing around and testing functions.
+        </div>
+        <div class="content">
+            When you find something you like, click 'Generate Gif' to begin the gif creation process. This can take some time if you create a large gif!  When it finishes generating, the canvas will outline in green, and you'll be able to download the gif by right-clicking and choosing 'Save As...'
+        </div>
+        <div class="content">
+            If you'd like to create a permanent link you can share, click the 'Get Permanent Link' button!
+        </div>
+    </div>
+</div>
+<script src="drawing.js" ></script>
