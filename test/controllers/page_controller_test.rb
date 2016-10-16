@@ -5,4 +5,9 @@ class PageControllerTest < ActionController::TestCase
     get :index
     assert_response :success
   end
+
+  test "cbc should render cbc success" do
+    get :cbc
+    assert_response :success
+  end
 end
