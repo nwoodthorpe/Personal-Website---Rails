@@ -23,26 +23,26 @@ function writeFunctionOnCanvas(){
 function beginDrawGif(){
     document.getElementById("img").style.display = "none";
     canvas.style.display = "inline";
-    
+
     clearInterval(interval);
     state = "gifdrawing";
-    
+
     drawTempVars.count = parseFloat(abeginBox.value);
     drawTempVars.first = true;
     drawTempVars.endVal = parseFloat(aendBox.value);
     drawTempVars.stepSize = parseFloat(incrementBox.value);
     drawTempVars.fps = parseInt(fpsBox.value);
-    
+
     interval = setInterval(drawGif, 0);
 }
 
 function beginDrawCanvas(){
     document.getElementById("img").style.display = "none";
     canvas.style.display = "inline";
-    
+
     clearInterval(interval);
     state = "canvas";
-    
+
     interval = setInterval(drawCanvas, 1000/parseFloat(document.getElementById("fps").value));
 }
 
@@ -88,7 +88,7 @@ function drawGif(){
         if(point > 300 && height > 300){ //We passed an asymptote, don't draw this part
             continue;
         }
-        
+
         ctx.fillRect(i, 300 - point, 1, height);
     }
     encoder.addFrame(ctx);
@@ -113,7 +113,7 @@ function drawCanvas(){
         console.log("Unexpected error, breaking");
         return;
     }
-    
+
     var expr = Parser.parse(box.value);
     var fun = function(xVal){
         return expr.evaluate({a: drawTempVars.count, x: xVal});
@@ -135,10 +135,10 @@ function drawCanvas(){
             continue;
         var ypixel1 = (y1 * 30) + 150;
         var ypixel2 = (y2 * 30) + 150;
-        
+
         var point = Math.max(ypixel1, ypixel2);
         var height = Math.abs(ypixel1-ypixel2)+1;
-        
+
         if(point > 300 && height > 300){ //We passed an asymptote, don't draw this part
             continue;
         }
@@ -157,16 +157,15 @@ function uploadToServer(){
         return;
     }
     var xmlhttp = new XMLHttpRequest();
-    xmlhttp.open("POST", "upload.php", true);
+    xmlhttp.open("POST", "mathgifs/new", true);
     var params = "gif=" + document.getElementById("img").getAttribute("src");
     xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
     xmlhttp.onreadystatechange = function() {
         if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-            window.prompt("Press Ctrl+C to copy!", "http://nwoodthorpe.com/mathgif/" + xmlhttp.responseText);
+            window.prompt("Press Ctrl+C to copy!", "http://nwoodthorpe.com/gifs/" + xmlhttp.responseText + ".gif");
         }
     }
-    
-    
+
     xmlhttp.send(params);
 }
 beginDrawCanvas();
